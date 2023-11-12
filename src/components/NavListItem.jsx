@@ -6,7 +6,7 @@ import './NavListItem.css';
 function NavListItem({ item, navOnClick }) {
     return (
         <li>
-            <a className={`nav-link ${item.active ? 'active' : ''}`} onClick={() => navOnClick(item._id)}>
+            <a className={`nav-link ${item.active ? 'active' : ''}`} onClick={() => navOnClick(item._id, item.target)}>
                 {item.name}
             </a>
         </li>
