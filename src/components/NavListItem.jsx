@@ -3,10 +3,10 @@ import React from 'react';
 
 import './NavListItem.css';
 
-function NavListItem({ item }) {
+function NavListItem({ item, navOnClick }) {
     return (
         <li>
-            <a href="" className='nav-link'>
+            <a className={`nav-link ${item.active ? 'active' : ''}`} onClick={() => navOnClick(item._id)}>
                 {item.name}
             </a>
         </li>
