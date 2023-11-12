@@ -87,5 +87,21 @@ section.section-show {
   z-index: 3;
 }
 
+section .container {
+  background: rgba(0, 0, 0, .8);
+  backdrop-filter: blur(20px);
+  padding: 30px;
+}
+
+@media (max-width: 768px) {
+  section {
+    top: 120px;
+  }
+  section.section-show {
+    top: 80px;
+  }
+}
+
+
 /* general end */
 
