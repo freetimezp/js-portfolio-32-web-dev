@@ -13,6 +13,8 @@ import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
 
 function App() {
+  const [aboutActive, setAboutActive] = useState(false);
+
   const homeRef = useRef();
   const aboutRef = useRef();
   const resumeRef = useRef();
@@ -68,8 +70,8 @@ function App() {
 
   return (
     <>
-      <Header reference={homeRef} sectionActive={handleSectionActive} />
-      <About reference={aboutRef} />
+      <Header reference={homeRef} sectionActive={handleSectionActive} aboutActive={setAboutActive} />
+      <About reference={aboutRef} aboutActive={aboutActive} />
       <Resume reference={resumeRef} />
       <Services reference={servicesRef} />
       <Portfolio reference={portfolioRef} />

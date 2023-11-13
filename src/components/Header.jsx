@@ -6,7 +6,7 @@ import navListData from '../data/navListData';
 import NavListItem from './NavListItem';
 import SocialLinksItem from './SocialLinksItem';
 
-function Header({ reference, sectionActive }) {
+function Header({ reference, sectionActive, aboutActive }) {
     const [navList, setNavList] = useState(navListData);
     const [header, setHeader] = useState(false);
 
@@ -16,6 +16,12 @@ function Header({ reference, sectionActive }) {
             setHeader(false);
         } else {
             setHeader(true);
+        }
+
+        if (target === 'about') {
+            aboutActive(true);
+        } else {
+            aboutActive(false);
         }
 
         const newNavList = navList.map(nav => {

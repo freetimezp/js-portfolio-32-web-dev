@@ -6,7 +6,7 @@ import profileImg from '../images/profile-img.jpg';
 import SectionTitle from '../components/SectionTitle';
 import Counter from '../components/Counter';
 
-function About({ reference }) {
+function About({ reference, aboutActive }) {
     return (
         <section id="about" className='about' ref={reference}>
             <div className="container about-me">
@@ -77,7 +77,7 @@ function About({ reference }) {
                 </div>
             </div>
 
-            <Counter />
+            <Counter active={aboutActive} />
         </section>
     );
 };
