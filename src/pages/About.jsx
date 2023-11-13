@@ -5,6 +5,7 @@ import profileImg from '../images/profile-img.jpg';
 
 import SectionTitle from '../components/SectionTitle';
 import Counter from '../components/Counter';
+import Skills from '../components/Skills';
 
 function About({ reference, aboutActive }) {
     return (
@@ -78,6 +79,7 @@ function About({ reference, aboutActive }) {
             </div>
 
             <Counter active={aboutActive} />
+            <Skills active={aboutActive} />
         </section>
     );
 };
