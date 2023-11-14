@@ -11,7 +11,7 @@ function Services({ reference }) {
     return (
         <section id="services" className='services' ref={reference}>
             <div className="container">
-                <SectionTitle title="Services" subtitle="My Services" />
+                <SectionTitle title="Services" subTitle="My Services" />
                 <div className="row">
                     {services.map(service => (
                         <ServicesItem key={service._id} service={service} />
