@@ -28,6 +28,24 @@ function Portfolio({ reference }) {
         setData(portfolio);
     }, [portfolio]);
 
+    const handleFilterData = (category) => {
+        const newFilter = filters.map(filter => {
+            filter.active = false;
+            if (filter.name === category) filter.active = true;
+            return filter;
+        });
+
+        setFilters(newFilter);
+
+        if (category === 'All') {
+            setData(portfolio);
+            return;
+        }
+
+        const filtered = portfolio.filter(item => item.category === category);
+        setData(filtered);
+    };
+
     return (
         <section id="portfolio" className='portfolio' ref={reference}>
             <div className="container">
@@ -37,7 +55,10 @@ function Portfolio({ reference }) {
                         <ul id="portfolio-filters">
                             {
                                 filters.map(filter => (
-                                    <li key={filter._id}>
+                                    <li
+                                        key={filter._id} className={filter.active ? 'filter-active' : null}
+                                        onClick={() => handleFilterData(filter.name)}
+                                    >
                                         {filter.name}
                                     </li>
                                 ))
