@@ -1,0 +1,69 @@
+.contact .contactForm {
+    padding: 30px;
+    background: rgba(255, 255, 255, .08);
+}
+
+.contact .contactForm input,
+.contact .contactForm textarea {
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+    background: rgba(255, 255, 255, .08);
+    border: 0;
+    transition: .3s;
+    color: #fff;
+}
+
+.contact .contactForm input:focus,
+.contact .contactForm textarea:focus {
+    background-color: rgba(255, 255, 255, .11);
+}
+
+.contact .contactForm input::-webkit-input-placeholder,
+.contact .contactForm textarea::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, .3);
+    opacity: 1;
+}
+
+.contact .contactForm input::-moz-placeholder,
+.contact .contactForm textarea::-moz-placeholder {
+    color: rgba(255, 255, 255, .3);
+    opacity: 1;
+}
+
+.contact .contactForm input::placeholder,
+.contact .contactForm textarea::placeholder {
+    color: rgba(255, 255, 255, .3);
+    opacity: 1;
+}
+
+.contact .contactForm input {
+    padding: 10px 15px;
+}
+
+.contact .contactForm textarea {
+    padding: 12px 15px;
+}
+
+.contact .contactForm button[type='submit'] {
+    margin-top: 30px;
+    background: var(--second);
+    border: 0;
+    padding: 10px 30px;
+    color: #fff;
+    transition: .4s;
+}
+
+.contact .contactForm button[type='submit']:hover {
+    background: var(--primary);
+    color: #1e1d1d;
+}
+
+.contact .contactForm .error-message {
+    margin-top: 10px;
+    background: rgba(255, 255, 255, .08);
+    background: #ed3c0d;
+    text-align: left;
+    padding: 15px;
+    font-weight: 600;
+}
