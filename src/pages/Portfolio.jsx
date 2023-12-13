@@ -11,7 +11,7 @@ function Portfolio({ reference }) {
     const [filters, setFilters] = useState(filterListData);
 
     const fetchData = () => {
-        fetch('http://localhost:3000/api/portfolioData.json')
+        fetch('https://js-portfolio-32-web-dev.vercel.app/api/portfolioData.json')
             .then(res => res.json())
             .then(data => {
                 //console.log(data);
